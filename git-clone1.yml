@@ -1,0 +1,7 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+   - name: Pull from git
+   	 shell: git pull git@github.com:subrata94/demo.git
+     sudo_user: ubuntu

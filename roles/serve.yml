@@ -1,0 +1,9 @@
+---
+
+name: add github ssh key
+copy: >
+  src=/home/innoraft/.ssh/id_rsa
+  dest=/home/ubuntu/.ssh/id_rsa.github
+  owner=root
+  group=root
+  mode=0640

@@ -1,0 +1,15 @@
+---
+- hosts: all
+  sudo: yes
+  vars:
+   nm1: node.yml
+   nm2: first_ec2
+  tasks: 
+   - name: Copying file {{ nm1 }}
+     copy:
+      src: /home/innoraft/{{ nm1 }}
+      dest: /home/ubuntu/
+   - name: Copying file {{ nm2 }}
+     copy:
+      src: /home/innoraft/{{ nm2 }}
+      dest: /home/ubuntu/

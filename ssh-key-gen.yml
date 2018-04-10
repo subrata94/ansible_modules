@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: yes
+  tasks: 
+   - name: Generate SSH keys
+     shell: ssh-keygen -b 4096 -t rsa -f /home/ubuntu/.ssh/id_rsa.git -q -N "subrata.ryo@gmail.com"
+     args:
+      creates: /home/ubuntu/.ssh/id_rsa.git

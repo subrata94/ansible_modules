@@ -1,0 +1,12 @@
+---
+- hosts: all # right now for all hosts
+  sudo: yes # need for connecting to ec2
+  tasks:
+   - name: pull from git
+     git:
+      repo: git@github.com:subrata94/demo.git # repository os the git user
+      dest: /home/ubuntu/demo/ # where you want to pull, that dir should be in git init situation
+      update: yes # after pull update the files
+      version: master # in which branch you want to pull branch
+      accept_hostkey: yes # required 
+     sudo_user: ubuntu # for the user who has ssh permission

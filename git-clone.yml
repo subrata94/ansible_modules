@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+   - name: Cloning git repository
+     shell: git clone https://github.com/subrata94/demo.git

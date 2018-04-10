@@ -1,0 +1,6 @@
+---
+- hosts: all
+  sudo: yes
+  tasks: 
+   - name: Generate SSH keys
+     shell: cat /home/ubuntu/.ssh/id_rsa.git
